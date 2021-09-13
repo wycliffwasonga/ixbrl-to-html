@@ -1,5 +1,11 @@
 # ixbrl-to-html
 
+Convert your [iXBRL](https://www.xbrl.org/the-standard/what/ixbrl/) files into HTML files you can open in your browser.
+
+## Prerequisite
+
+* [Docker](https://www.docker.com/get-started)
+
 ## Build
 
 ```sh
@@ -7,6 +13,20 @@ $ docker build -t ixbrltohtml .
 ```
 
 ## Usage
+At the moment, there are two ways to execute the tool, either through a shell script or using docker run.
+
+### 1. Shell script
+The shell script is a convenience wrapper to using docker run directly. It takes in fewer arguments.
+
+```sh
+./ixbrltohtml.sh -o OUTPUT_FILE INPUT_FILE
+```
+
+Note: 
+This has only be tested on macOS Big Sur 11.5.2 but should work with any UNIX OS having a bash shell.
+
+### 2. docker run
+The tool can alternatively be executed using docker run command. This is the preferred usage in Windows systems which ,by default, doesn't have a bash shell.
 
 ```sh
 $ docker run --rm \
